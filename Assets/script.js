@@ -4,9 +4,9 @@
 const form = document.querySelector("form");
 
 // creo una funzione che esegua quello che gli richiedo quando invio il form
-form.onsubmit = element => {
+form.onsubmit = event => {
   // questo fa in modo che la pagina non faccia un refresh
-  element.preventDefault();
+  event.preventDefault();
 
   //dichiaro la variabile che prende i valori che inserisco nell'input
   const taskInput = document.getElementById("task");
@@ -45,6 +45,15 @@ form.onsubmit = element => {
     }
   };
 
+  const deleteB = document.createElement("button");
+  deleteB.innerText = "Elimina task!";
+  deleteB.classList.add("deleteB");
+
+  deleteB.onclick = event => {
+    event.currentTarget.closest(".li").remove();
+  };
+
+  list.appendChild(deleteB);
   unList.appendChild(list);
   taskDiv.appendChild(unList);
   contentArea.appendChild(taskDiv);

@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: aqua;
+}
+main {
+  display: block;
+  margin: auto;
+  width: 60vh;
+  height: 50vh;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
 header h1 {
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -22,6 +34,8 @@ form {
 
 input {
   width: 50%;
+  height: 4vh;
+  margin-top: 20px;
 }
 
 .taskDiv {
@@ -34,4 +48,8 @@ input {
 
 .li {
   cursor: pointer;
+}
+
+.deleteB {
+  margin-left: 10px;
 }
